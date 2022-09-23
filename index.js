@@ -1,5 +1,6 @@
 // given a payrate calculate a workday (8hrs)
-8;
+function dayRate(rate) {
+    return rate *8
 }
 console.log(dayRate(100));
 
