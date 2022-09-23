@@ -6,4 +6,8 @@ console.log(dayRate(100));
 
 // calculate number of workdays given a budget
 
-console.log(daysInBudget(300,100))
+function daysInBudget(budget, rate){
+    return budget/ dayRate(rate);
+}
+
+console.log(daysInBudget(1600,100));
