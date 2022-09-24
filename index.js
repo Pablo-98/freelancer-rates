@@ -11,3 +11,12 @@ function daysInBudget(budget, rate){
 }
 
 console.log(daysInBudget(1600,100));
+
+//calculate the discount rate for large projects
+// the freelancer offers a discount for every full month. The rest are billed at a dayrate
+
+function priceWithMonthlyDiscount(rate, numDays, discount){
+    // discount is 42%(0.42)
+    return 
+}
+console.log(dayRate(89))
