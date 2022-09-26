@@ -22,14 +22,15 @@
     // step 5 multiply the discounted monthly rate by the number of months that are going to be worked 
     // step 6 multiply the remaining days at the regular dayRate and add it to step 5
     const totalMonths = Math.floor(numDays / 22);
-    const monthlyRate = rate * 8 * 22; 
+    const monthlyRate = dayRate(rate) * 22; 
     const remainingDays = numDays % 22 //% symbol returns the remainder which in this case is 10
-    const discountedMonth = monthlyRate - monthlyRate * discount;
+    const discount1 = monthlyRate * discount;
     
 
-    return discountedMonth * totalMonths + remainingDays * dayRate(rate);
+    return Math.ceil(totalMonths * (monthlyRate - discount1) + remainingDays * dayRate(rate));
 
 
 }
-console.log(dayRate(89,230,0.42));
+console.log(priceWithMonthlyDiscount(89,230, 0.42));
+//(dayRate(89,230,0.42));
 // returns 712 when the answer should be 97972
